@@ -7,7 +7,7 @@ import time
 
 url = "https://keycloak.iudx.org.in/auth/realms/iudx/protocol/openid-connect/token"
 
-payload=f'client_id=binder-oauth-client-public&grant_type=refresh_token&refresh_token={os.environ["KC_REFRESH_TOKEN"]}'
+payload=f'client_id=playground-client&grant_type=refresh_token&refresh_token={os.environ["KC_REFRESH_TOKEN"]}'
 headers = {
     'Content-Type': 'application/x-www-form-urlencoded'
 }
