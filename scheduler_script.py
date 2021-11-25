@@ -21,7 +21,7 @@ def run():
     while True:
         with open('credentials.json') as f:
             json_data = json.load(f)
-            payload = f'client_id=binder-oauth-client-public&grant_type=refresh_token&refresh_token={json_data["refresh_token"]}'
+            payload = f'client_id=playground-client&grant_type=refresh_token&refresh_token={json_data["refresh_token"]}'
         response = requests.request("POST", url, headers=headers, data=payload)
         with open('credentials.json', 'w', encoding='utf-8') as f:
             json.dump(response.json(), f, ensure_ascii=False, indent=4)
