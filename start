@@ -1,0 +1,6 @@
+#!/bin/bash
+
+mkdir /home/jovyan/logs/
+/usr/bin/supervisord -c /home/jovyan/supervisord.conf
+
+exec "$@"
